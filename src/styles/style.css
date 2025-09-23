@@ -1,0 +1,466 @@
+/* Custom CSS Properties from Tailwind Config */
+:root {
+  --primary: #13a4ec;
+  --background-light: #f6f7f8;
+  --background-dark: #101c22;
+  --text-light: #101c22;
+  --text-dark: #f6f7f8;
+  --card-light: #ffffff;
+  --card-dark: #1a2830;
+  --muted-light: #6b7280;
+  --muted-dark: #9ca3af;
+}
+
+/* General Body Styles */
+body {
+  background-color: var(--background-light);
+  color: var(--text-light);
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+.dark body {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid var(--background-light);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.dark .app-header {
+  border-bottom-color: var(--card-dark);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--primary);
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-btn {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header-btn:hover {
+  background-color: rgba(19, 164, 236, 0.1);
+}
+
+.dark .header-btn:hover {
+  background-color: rgba(19, 164, 236, 0.2);
+}
+
+.profile-picture {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 9999px;
+}
+
+/* Main Content */
+main {
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+.content-wrapper {
+  max-width: 896px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* User Profile Section */
+.user-profile-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-profile-picture {
+  width: 6rem;
+  height: 6rem;
+  background-image: url('https://avatar.iran.liara.run/public/36');
+}
+
+.user-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.user-phone {
+  color: var(--muted-light);
+}
+
+.dark .user-phone {
+  color: var(--muted-dark);
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--card-light);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.dark .card {
+  background-color: var(--card-dark);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Balance Card */
+.balance-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.balance-amount {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.balance-expiry {
+  color: var(--muted-light);
+}
+.dark .balance-expiry {
+  color: var(--muted-dark);
+}
+
+/* Active Package Card */
+.package-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.progress-container {
+  width: 100%;
+  background-color: rgba(19, 164, 236, 0.1);
+  border-radius: 9999px;
+  height: 0.625rem;
+  margin-top: 0.75rem;
+}
+
+.progress-bar {
+  background-color: var(--primary);
+  height: 0.625rem;
+  border-radius: 9999px;
+  width: 75%;
+}
+
+.usage-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--muted-light);
+}
+
+.dark .usage-details {
+  color: var(--muted-dark);
+}
+
+.usage-details .value {
+  font-weight: 700;
+  color: var(--text-light);
+}
+.dark .usage-details .value {
+  color: var(--text-dark);
+}
+
+/* Section Header */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.see-all-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.see-all-link:hover {
+  text-decoration: underline;
+}
+
+/* Recommended Packages */
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .recommendations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .recommendations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.package-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: var(--card-light);
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.dark .package-item {
+  background-color: var(--card-dark);
+}
+.package-item:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.package-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.package-item-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.package-item-details {
+  color: var(--muted-light);
+}
+.dark .package-item-details {
+  color: var(--muted-dark);
+}
+.package-item-icon-wrapper {
+  background-color: rgba(19, 164, 236, 0.1);
+  padding: 0.5rem;
+  border-radius: 9999px;
+}
+.package-item-icon {
+  color: var(--primary);
+}
+.package-item-footer {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.package-item-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.buy-button-small {
+  font-size: 0.875rem;
+}
+
+/* Purchase List */
+.purchase-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.purchase-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--background-light);
+  border-radius: 0.5rem;
+}
+.dark .purchase-item {
+  background-color: var(--background-dark);
+}
+
+.purchase-item-main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.purchase-item-icon {
+  padding: 0.75rem;
+  border-radius: 9999px;
+  background-color: rgba(19, 164, 236, 0.1);
+}
+
+.purchase-item-title {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+.purchase-item-details {
+  color: var(--muted-light);
+}
+.dark .purchase-item-details {
+  color: var(--muted-dark);
+}
+
+.purchase-item-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.purchase-item-price {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+@media (min-width: 640px) {
+  .purchase-item {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .purchase-item-actions {
+    margin-top: 0;
+    gap: 1rem;
+  }
+}
+
+/* Buttons */
+.button {
+  font-weight: 700;
+  color: white;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #1093d4; /* Darker primary */
+}
+
+.button-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  vertical-align: middle; /* Better alignment */
+}
+
+/* Purchase History Section */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--card-light);
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.dark .history-item {
+  background-color: var(--card-dark);
+}
+
+.history-item-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.history-item-icon {
+  padding: 0.75rem;
+  border-radius: 9999px;
+  background-color: rgba(19, 164, 236, 0.1);
+}
+
+.history-item-name {
+  font-weight: 700;
+}
+
+.history-item-date {
+  font-size: 0.875rem;
+  color: var(--muted-light);
+}
+
+.dark .history-item-date {
+  color: var(--muted-dark);
+}
+
+.history-item-price {
+  font-weight: 700;
+  color: var(--primary);
+}

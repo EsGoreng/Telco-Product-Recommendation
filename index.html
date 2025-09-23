@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MyNet Mobile Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link href="src/styles/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="app-header">
+        <div class="logo-container">
+          <div class="logo-svg">
+            <!-- Buat SVG (LOGO) Jadi Component -->
+            <svg
+              width="100%"
+              height="100%"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.6584 40H15.3817C12.0653 40 10.07 39.9994 8.54581 39.7159L17.3668 28.0344L16.6584 40Z"
+                fill="#FF1616"
+              ></path>
+              <path
+                d="M31.2482 39.7514C29.7502 39.9988 27.7875 40 24.6183 40H23.109L22.397 28.0309L31.2482 39.7514Z"
+                fill="#FF1616"
+              ></path>
+              <path
+                d="M39.6715 31.6708C39.6071 31.9773 39.5313 32.2655 39.4389 32.5426C38.8337 34.3567 37.7712 35.9522 36.3867 37.1982L26.44 26.044L39.6715 31.6708Z"
+                fill="#FF1616"
+              ></path>
+              <path
+                d="M3.48544 37.0792C2.16397 35.8511 1.14739 34.3 0.56108 32.5426C0.459551 32.2382 0.375253 31.921 0.307173 31.5803L13.3239 26.0458L3.48544 37.0792Z"
+                fill="#FF1616"
+              ></path>
+              <path
+                d="M40 24.6183C40 25.7428 39.9968 26.7154 39.9858 27.5692L28.1729 2300006H40V24.6183Z"
+                fill="#FF1616"
+              ></path>
+              <path
+                d="M11.5962 2300006L0.0106534 27.4805C000000706106 26.6481 0 25.704 0 24.6183V2300006H11.5962Z"
+                fill="#FF1616"
+              ></path>
+              <path
+                d="M24.6183 0C28.7807 0 30.862 000000553673 32.5426 0.56108C35.7979 1.64713 38.3529 4.20208 39.4389 7.45739C39.9994 9.13798 40 11.2193 40 15.3817V20.016H27.5089L36.5181 16.1861L33.8459 14.4123L25.1048 17.7876L29.2081 12.358L26.2571 11.5501L21.7259 16.6282L21.3885 10.9091H18.3825L18.0398 16.6282L13.5121 11.5501L10.5629 12.358L14.6609 17.7859L5.92507 14.4123L3.25284 16.1861L12.2603 20.016H0V15.3817C0 11.2193 000000553673 9.13798 0.56108 7.45739C1.64713 4.20208 4.20208 1.64713 7.45739 0.56108C9.13798 000000553673 11.2193 0 15.3817 0H24.6183Z"
+                fill="#FF1616"
+              ></path>
+            </svg>
+          </div>
+          <h1 class="logo-text">MyTelco</h1>
+        </div>
+        <div class="header-actions">
+          <button class="header-btn">
+            <span class="material-symbols-outlined">settings</span>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <div class="content-wrapper">
+          <section class="user-profile-section">
+            <div class="profile-picture user-profile-picture"></div>
+            <div>
+              <h2 class="user-name">Usep Surusep</h2>
+              <p class="user-phone">+62 812-3456-7890</p>
+            </div>
+          </section>
+
+          <section>
+            <div class="card-grid">
+              <div class="card">
+                <h3 class="card-title">Your Balance</h3>
+                <div class="balance-card-content">
+                  <div>
+                    <p class="balance-amount">Rp25.500</p>
+                    <p class="balance-expiry">Valid until 30 July 2024</p>
+                  </div>
+                  <button class="button">Top Up</button>
+                </div>
+              </div>
+              <div class="card">
+                <h3 class="card-title">Active Package</h3>
+                <h4 class="package-name">Unlimited Data</h4>
+                <div class="progress-container">
+                  <div class="progress-bar"></div>
+                </div>
+                <div class="usage-details">
+                  <span><span class="value">20 GB</span> remaining</span>
+                  <span><span class="value">15 days</span> left</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <section-header title="Recommended for You"></section-header>
+            <div class="recommendations-grid">
+              <package-item></package-item>
+            </div>
+          </section>
+
+          <section>
+            <section-header title="Purchase a Package"></section-header>
+            <div class="card">
+              <div class="purchase-list">
+                <div class="purchase-item">
+                  <div class="purchase-item-main">
+                    <div class="purchase-item-icon">
+                      <span
+                        class="material-symbols-outlined"
+                        style="color: var(--primary)"
+                        >wifi</span
+                      >
+                    </div>
+                    <div>
+                      <h4 class="purchase-item-title">Internet OMG!</h4>
+                      <p class="purchase-item-details">30GB | 30 Days</p>
+                    </div>
+                  </div>
+                  <div class="purchase-item-actions">
+                    <p class="purchase-item-price">Rp150000</p>
+                    <button class="button button-small">Select</button>
+                  </div>
+                </div>
+                <div class="purchase-item">
+                  <div class="purchase-item-main">
+                    <div class="purchase-item-icon">
+                      <span
+                        class="material-symbols-outlined"
+                        style="color: var(--primary)"
+                        >call</span
+                      >
+                    </div>
+                    <div>
+                      <h4 class="purchase-item-title">Talk Mania</h4>
+                      <p class="purchase-item-details">500 Mins | 7 Days</p>
+                    </div>
+                  </div>
+                  <div class="purchase-item-actions">
+                    <p class="purchase-item-price">Rp50000</p>
+                    <button class="button button-small">Select</button>
+                  </div>
+                </div>
+                <div class="purchase-item">
+                  <div class="purchase-item-main">
+                    <div class="purchase-item-icon">
+                      <span
+                        class="material-symbols-outlined"
+                        style="color: var(--primary)"
+                        >sms</span
+                      >
+                    </div>
+                    <div>
+                      <h4 class="purchase-item-title">SMS Package</h4>
+                      <p class="purchase-item-details">1000 SMS | 30 Days</p>
+                    </div>
+                  </div>
+                  <div class="purchase-item-actions">
+                    <p class="purchase-item-price">Rp20000</p>
+                    <button class="button button-small">Select</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <section-header title="Purcahse History"></section-header>
+
+            <div class="history-list">
+              <div class="history-item">
+                <div class="history-item-details">
+                  <div class="history-item-icon">
+                    <span
+                      class="material-symbols-outlined"
+                      style="color: var(--primary)"
+                      >receipt_long</span
+                    >
+                  </div>
+                  <div>
+                    <p class="history-item-name">Super Quota</p>
+                    <p class="history-item-date">June 15, 2024</p>
+                  </div>
+                </div>
+                <p class="history-item-price">Rp100000</p>
+              </div>
+
+              <div class="history-item">
+                <div class="history-item-details">
+                  <div class="history-item-icon">
+                    <span
+                      class="material-symbols-outlined"
+                      style="color: var(--primary)"
+                      >receipt_long</span
+                    >
+                  </div>
+                  <div>
+                    <p class="history-item-name">Max Stream</p>
+                    <p class="history-item-date">June 8, 2024</p>
+                  </div>
+                </div>
+                <p class="history-item-price">Rp50000</p>
+              </div>
+
+              <div class="history-item">
+                <div class="history-item-details">
+                  <div class="history-item-icon">
+                    <span
+                      class="material-symbols-outlined"
+                      style="color: var(--primary)"
+                      >receipt_long</span
+                    >
+                  </div>
+                  <div>
+                    <p class="history-item-name">Unlimited Data</p>
+                    <p class="history-item-date">May 31, 2024</p>
+                  </div>
+                </div>
+                <p class="history-item-price">Rp150000</p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <script type="module" src="/src/app.js"></script>
+      </main>
+    </div>
+  </body>
+</html>
