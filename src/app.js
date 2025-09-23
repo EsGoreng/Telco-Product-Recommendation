@@ -1,7 +1,7 @@
-import "./script/components/index.js";
+import "./scripts/components/index.js";
 
-import RecommendedPackages from "./script/data/local/recommendedPackages.js";
-import PurchaseHistory from "./script/data/local/purchaseHistory.js";
+import RecommendedPackages from "./scripts/data/local/recommendedPackages.js";
+import PurchaseHistory from "./scripts/data/local/purchaseHistory.js";
 
 const main = () => {
   const recommendationsGrid = document.querySelector(".recommendations-grid");
