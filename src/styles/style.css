@@ -13,8 +13,8 @@
 
 /* General Body Styles */
 body {
-  background-color: var(--background-light);
-  color: var(--text-light);
+  background-color: var(--background-dark);
+  color: var(--text-dark);
   font-family: "Inter", sans-serif;
   margin: 0;
 }
@@ -68,9 +68,9 @@ body {
 }
 
 .header-btn {
-  padding: 0.5rem;
+  padding: 0.9rem;
   border-radius: 9999px;
-  background-color: transparent;
+  background-color: var(--background-dark);
   border: none;
   cursor: pointer;
 }
@@ -117,7 +117,7 @@ main {
 .user-profile-picture {
   width: 6rem;
   height: 6rem;
-  background-image: url('https://avatar.iran.liara.run/public/36');
+  background-image: url('https://api.dicebear.com/9.x/fun-emoji/svg');
 }
 
 .user-name {
@@ -126,7 +126,7 @@ main {
 }
 
 .user-phone {
-  color: var(--muted-light);
+  color: var(--muted-dark);
 }
 
 .dark .user-phone {
@@ -135,7 +135,7 @@ main {
 
 /* Card Styles */
 .card {
-  background-color: var(--card-light);
+  background-color: var(--card-dark);
   border-radius: 0.75rem;
   padding: 1.5rem;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -177,7 +177,7 @@ main {
 }
 
 .balance-expiry {
-  color: var(--muted-light);
+  color: var(--muted-dark);
 }
 .dark .balance-expiry {
   color: var(--muted-dark);
@@ -209,7 +209,7 @@ main {
   justify-content: space-between;
   margin-top: 0.5rem;
   font-size: 0.875rem;
-  color: var(--muted-light);
+  color: var(--muted-dark);
 }
 
 .dark .usage-details {
@@ -218,7 +218,7 @@ main {
 
 .usage-details .value {
   font-weight: 700;
-  color: var(--text-light);
+  color: var(--text-dark);
 }
 .dark .usage-details .value {
   color: var(--text-dark);
@@ -272,7 +272,7 @@ main {
   flex-direction: column;
   padding: 1rem;
   border-radius: 0.75rem;
-  background-color: var(--card-light);
+  background-color: var(--card-dark);
   cursor: pointer;
   transition: box-shadow 0.2s;
 }
@@ -293,7 +293,7 @@ main {
   font-weight: 700;
 }
 .package-item-details {
-  color: var(--muted-light);
+  color: var(--muted-dark);
 }
 .dark .package-item-details {
   color: var(--muted-dark);
@@ -332,7 +332,7 @@ main {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  background-color: var(--background-light);
+  background-color: var(--background-dark);
   border-radius: 0.5rem;
 }
 .dark .purchase-item {
@@ -356,7 +356,7 @@ main {
   font-size: 1.125rem;
 }
 .purchase-item-details {
-  color: var(--muted-light);
+  color: var(--muted-dark);
 }
 .dark .purchase-item-details {
   color: var(--muted-dark);
@@ -426,7 +426,7 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background-color: var(--card-light);
+  background-color: var(--card-dark);
   border-radius: 0.75rem;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
@@ -453,7 +453,7 @@ main {
 
 .history-item-date {
   font-size: 0.875rem;
-  color: var(--muted-light);
+  color: var(--muted-dark);
 }
 
 .dark .history-item-date {
