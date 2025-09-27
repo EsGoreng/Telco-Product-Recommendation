@@ -42,13 +42,13 @@ Proyek ini dikerjakan oleh tim yang terdiri dari:
 
 ### 2 Machine Learning Engineers
 
-Ayunda Putri - M251D5X0322
+Ayunda Putri - M251D5X0322<br>
 Muhammad Fiqri J.A. - M253D5Y1274
 
 ### 3 Front-End & Back-End Developers
 
-Itsna Akhdan Fadhil - F012D5Y0871
-Amrully Arun Hadi - F888D5Y0193
+Itsna Akhdan Fadhil - F012D5Y0871<br>
+Amrully Arun Hadi - F888D5Y0193<br>
 Aziz Ridhwan Pratama - F002D5Y0325
 
 ## 📚 Sumber Daya Referensi
