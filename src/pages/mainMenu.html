@@ -16,7 +16,6 @@
     class="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200"
   >
     <div class="flex flex-col min-h-screen">
-
       <header
         class="bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800"
       >
@@ -55,103 +54,123 @@
           </div>
         </div>
       </header>
-      
+
       <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="max-w-3xl mx-auto">
           <div class="text-center mb-12">
             <h1
               class="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl"
             >
-              Find the Right Chemical Product
+              Accelerate Material Discovery with AI
             </h1>
             <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">
-              Enter your criteria below to discover the perfect solution for
-              your needs.
+              Define your desired properties, and let our AI agent design novel molecules tailored to your needs.
             </p>
           </div>
           <div
             class="bg-white dark:bg-slate-900/50 p-8 rounded-xl shadow-lg border border-slate-200 dark:border-slate-800"
           >
             <form class="space-y-6">
+              <div class="text-center">
+                <h1
+                  class="text-xl font-bold text-slate-800 dark:text-slate-200"
+                >
+                  Novel Chemical Discovery Agent
+                </h1>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                  Masukkan kriteria sifat kimia yang Anda inginkan untuk
+                  ditemukan oleh AI.
+                </p>
+              </div>
+
               <div>
                 <label
+                  for="boiling_point"
                   class="block text-sm font-medium text-slate-700 dark:text-slate-300"
-                  for="product_name"
-                  >Product Name or CAS Number</label
                 >
+                  Titik Didih (Boiling Point) dalam °C
+                </label>
                 <div class="mt-1">
                   <input
+                    type="number"
+                    name="boiling_point"
+                    id="boiling_point"
                     class="form-input block w-full rounded border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm h-12 px-4"
-                    id="product_name"
-                    name="product_name"
-                    placeholder="e.g., Isopropyl Alcohol or 67-63-0"
-                    type="text"
+                    placeholder="Contoh: 150.5"
+                    step="any"
+                    required
                   />
                 </div>
               </div>
+
               <div>
                 <label
+                  for="viscosity"
                   class="block text-sm font-medium text-slate-700 dark:text-slate-300"
-                  for="properties"
-                  >Desired Properties</label
                 >
+                  Viskositas (Viscosity) dalam cP
+                </label>
+                <div class="mt-1">
+                  <input
+                    type="number"
+                    name="viscosity"
+                    id="viscosity"
+                    class="form-input block w-full rounded border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm h-12 px-4"
+                    placeholder="Contoh: 2.1"
+                    step="any"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="solubility"
+                  class="block text-sm font-medium text-slate-700 dark:text-slate-300"
+                >
+                  Kelarutan (Solubility)
+                </label>
                 <div class="mt-1">
                   <select
+                    id="solubility"
+                    name="solubility"
                     class="block w-full rounded border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm h-12 px-4"
-                    id="properties"
-                    name="properties"
+                    required
                   >
-                    <option>Select properties</option>
-                    <option>High Purity</option>
-                    <option>Low Water Content</option>
-                    <option>Specific Viscosity</option>
+                    <option value="">Pilih tingkat kelarutan</option>
+                    <option value="rendah">Rendah (Low)</option>
+                    <option value="sedang">Sedang (Medium)</option>
+                    <option value="tinggi">Tinggi (High)</option>
                   </select>
                 </div>
               </div>
+
               <div>
                 <label
+                  for="thermal_stability"
                   class="block text-sm font-medium text-slate-700 dark:text-slate-300"
-                  for="applications"
-                  >Applications</label
                 >
+                  Stabilitas Termal (Thermal Stability) dalam °C
+                </label>
                 <div class="mt-1">
-                  <select
-                    class="block w-full rounded border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm h-12 px-4"
-                    id="applications"
-                    name="applications"
-                  >
-                    <option>Select applications</option>
-                    <option>Pharmaceuticals</option>
-                    <option>Electronics Cleaning</option>
-                    <option>Laboratory Solvent</option>
-                  </select>
+                  <input
+                    type="number"
+                    name="thermal_stability"
+                    id="thermal_stability"
+                    class="form-input block w-full rounded border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm h-12 px-4"
+                    placeholder="Suhu dekomposisi, contoh: 300"
+                    step="any"
+                    required
+                  />
                 </div>
               </div>
-              <div>
-                <label
-                  class="block text-sm font-medium text-slate-700 dark:text-slate-300"
-                  for="safety"
-                  >Safety Ratings</label
-                >
-                <div class="mt-1">
-                  <select
-                    class="block w-full rounded border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm h-12 px-4"
-                    id="safety"
-                    name="safety"
-                  >
-                    <option>Select safety ratings</option>
-                    <option>GHS Compliant</option>
-                    <option>REACH Certified</option>
-                    <option>Food Grade</option>
-                  </select>
-                </div>
-              </div>
+
               <div class="pt-4">
                 <button
-                  class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-bold text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark transition-colors"
                   type="submit"
+                  class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-bold text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark transition-colors"
                 >
-                  Search Products
+                  Mulai Pencarian AI
                 </button>
               </div>
             </form>
@@ -168,7 +187,6 @@
           <p>© 2024 ChemFinder. All rights reserved.</p>
         </div>
       </footer>
-
     </div>
   </body>
 </html>
