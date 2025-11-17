@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chemical Discovery Dashboard</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100"
+  >
+    <div class="min-h-screen p-6 max-w-[1400px] mx-auto">
+      <!-- Header -->
+      <header class="flex items-center justify-between mb-6">
+        <div>
+          <h1 class="text-2xl font-bold">Chemical Discovery Dashboard</h1>
+          <div class="text-sm text-slate-500">
+            Research & AI-assisted molecular discovery
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="relative">
+            <input
+              placeholder="Search molecule or formula"
+              class="pl-3 pr-10 py-2 rounded-lg border bg-white dark:bg-slate-800"
+            />
+            <button
+              class="absolute right-1 top-1/2 -translate-y-1/2 px-3 py-1 text-sm bg-blue-500 text-white rounded"
+            >
+              Search
+            </button>
+          </div>
+          <button class="p-2 rounded bg-white dark:bg-slate-800 shadow">
+            🔔
+          </button>
+          <div class="relative">
+            <button
+              class="flex items-center gap-2 bg-white dark:bg-slate-800 p-2 rounded shadow"
+            >
+              <div
+                class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700"
+              ></div>
+              <div class="text-sm">Dr. Researcher</div>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Stat cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <div
+          class="bg-white dark:bg-slate-900 rounded-lg shadow p-4 flex items-center justify-between"
+        >
+          <div>
+            <div class="text-sm text-slate-500">Molecules Analyzed</div>
+            <div class="text-2xl font-semibold">1,248</div>
+            <div class="text-xs text-slate-400 mt-1">Last 7 days</div>
+          </div>
+          <div class="ml-4">
+            <svg width="80" height="24">
+              <polyline
+                points="0,18 20,12 40,8 60,10 80,6"
+                fill="none"
+                stroke="#60A5FA"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div
+          class="bg-white dark:bg-slate-900 rounded-lg shadow p-4 flex items-center justify-between"
+        >
+          <div>
+            <div class="text-sm text-slate-500">Predictions Generated</div>
+            <div class="text-2xl font-semibold">3,412</div>
+            <div class="text-xs text-slate-400 mt-1">AI runs</div>
+          </div>
+          <div class="ml-4">
+            <svg width="80" height="24">
+              <polyline
+                points="0,20 20,15 40,10 60,12 80,9"
+                fill="none"
+                stroke="#34D399"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div
+          class="bg-white dark:bg-slate-900 rounded-lg shadow p-4 flex items-center justify-between"
+        >
+          <div>
+            <div class="text-sm text-slate-500">Experiments in Progress</div>
+            <div class="text-2xl font-semibold">12</div>
+            <div class="text-xs text-slate-400 mt-1">Active</div>
+          </div>
+          <div class="ml-4">
+            <svg width="80" height="24">
+              <polyline
+                points="0,16 20,18 40,14 60,16 80,12"
+                fill="none"
+                stroke="#F59E0B"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div
+          class="bg-white dark:bg-slate-900 rounded-lg shadow p-4 flex items-center justify-between"
+        >
+          <div>
+            <div class="text-sm text-slate-500">Dataset Size</div>
+            <div class="text-2xl font-semibold">24,560</div>
+            <div class="text-xs text-slate-400 mt-1">Entries</div>
+          </div>
+          <div class="ml-4">
+            <svg width="80" height="24">
+              <polyline
+                points="0,22 20,18 40,20 60,22 80,24"
+                fill="none"
+                stroke="#A78BFA"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 space-y-4">
+          <div class="bg-white dark:bg-slate-900 rounded-lg p-4 shadow">
+            <h3 class="font-semibold mb-3">Molecular Preview</h3>
+            <div class="flex gap-4">
+              <div
+                class="w-48 h-48 bg-slate-100 dark:bg-slate-800 rounded flex items-center justify-center"
+              >
+                3D Viewer
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold">Molecule-X27</h4>
+                <div class="text-sm text-slate-500 mt-1">
+                  Formula:
+                  <span class="font-medium text-slate-700 dark:text-slate-200"
+                    >C6H6O2</span
+                  >
+                </div>
+                <div class="text-sm text-slate-500">
+                  Mol. Weight: <span class="font-medium">110.11</span>
+                </div>
+                <div class="text-sm text-slate-500">
+                  Toxicity score:
+                  <span class="font-medium text-red-500">0.12</span>
+                </div>
+                <pre
+                  class="text-xs bg-slate-50 dark:bg-slate-800 p-2 rounded mt-3"
+                >
+SMILES: C1=CC=CC=C1O2</pre
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-slate-900 rounded-lg p-4 shadow">
+            <h3 class="font-semibold mb-3">AI Activity Feed</h3>
+            <div class="divide-y divide-slate-100 dark:divide-slate-800">
+              <div class="p-3 flex items-start gap-3">
+                <div
+                  class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center"
+                >
+                  A
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <div class="font-medium">Molecule-X27</div>
+                    <div class="text-xs text-slate-400">2m</div>
+                  </div>
+                  <div class="text-sm text-slate-600 dark:text-slate-300">
+                    Analisis selesai — prediksi: low toxicity
+                  </div>
+                </div>
+              </div>
+              <div class="p-3 flex items-start gap-3">
+                <div
+                  class="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center"
+                >
+                  P
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <div class="font-medium">Molecule-A11</div>
+                    <div class="text-xs text-slate-400">12m</div>
+                  </div>
+                  <div class="text-sm text-slate-600 dark:text-slate-300">
+                    Prediksi generated — score 0.82
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-slate-900 rounded-lg p-4 shadow">
+            <h3 class="font-semibold mb-3">Recent Projects</h3>
+            <div class="grid gap-3">
+              <div class="flex items-center justify-between p-3 border rounded">
+                <div>
+                  <div class="font-medium">Project Phenol-Analogs</div>
+                  <div class="text-xs text-slate-500">Last update: 1h ago</div>
+                </div>
+                <div
+                  class="text-sm px-2 py-1 rounded bg-green-100 text-green-700"
+                >
+                  Running
+                </div>
+              </div>
+              <div class="flex items-center justify-between p-3 border rounded">
+                <div>
+                  <div class="font-medium">Catalyst Screening</div>
+                  <div class="text-xs text-slate-500">
+                    Last update: Yesterday
+                  </div>
+                </div>
+                <div
+                  class="text-sm px-2 py-1 rounded bg-yellow-100 text-yellow-700"
+                >
+                  Paused
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="space-y-4">
+          <div class="bg-white dark:bg-slate-900 rounded-lg p-4 shadow">
+            <h4 class="font-semibold mb-2">Quick Actions</h4>
+            <div class="grid grid-cols-2 gap-3">
+              <button
+                class="bg-white dark:bg-slate-800 border rounded-lg p-3 flex flex-col items-center gap-2"
+              >
+                ⬆️<span class="text-sm">Upload Molecule</span>
+              </button>
+              <button
+                class="bg-white dark:bg-slate-800 border rounded-lg p-3 flex flex-col items-center gap-2"
+              >
+                🤖<span class="text-sm">Generate Prediction</span>
+              </button>
+              <button
+                class="bg-white dark:bg-slate-800 border rounded-lg p-3 flex flex-col items-center gap-2"
+              >
+                🔬<span class="text-sm">Compare Structures</span>
+              </button>
+              <button
+                class="bg-white dark:bg-slate-800 border rounded-lg p-3 flex flex-col items-center gap-2"
+              >
+                📁<span class="text-sm">Access Dataset</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-slate-900 rounded-lg p-4 shadow">
+            <h4 className="font-semibold mb-2">AI Activity (compact)</h4>
+            <div class="space-y-2 text-sm">
+              <div class="flex items-center justify-between">
+                <div>Molecule-X27</div>
+                <div class="text-slate-400">2m</div>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>Molecule-A11</div>
+                <div class="text-slate-400">12m</div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>

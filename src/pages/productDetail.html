@@ -4,22 +4,16 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>ChemFinder Product Details</title>
-    <link href="../../dist/output.css" rel="stylesheet" /><link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
-      rel="stylesheet"
-    />
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
+    <!-- Styles & auth injected via main bundle -->
   </head>
   <body
     class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200"
   >
     <div class="flex min-h-screen flex-col">
-
       <header
         class="bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800"
       >
@@ -70,10 +64,11 @@
                 >Contact</a
               >
             </nav>
+            <div data-auth class="hidden md:flex items-center gap-3"></div>
           </div>
         </div>
       </header>
-      
+
       <main class="flex-grow">
         <div class="mx-auto max-w-5xl py-8 px-4 sm:px-6 lg:px-8">
           <div class="mb-8">
