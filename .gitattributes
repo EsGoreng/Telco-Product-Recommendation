@@ -1,0 +1,2 @@
+*.pkl filter=lfs diff=lfs merge=lfs -text
+src/model/chemical_predictor_model_rf.pkl filter=lfs diff=lfs merge=lfs -text

@@ -40,16 +40,6 @@
               </h1>
             </div>
             <nav class="hidden md:flex items-center gap-8">
-              <a
-                class="text-sm font-medium hover:text-primary dark:hover:text-primary"
-                href="../../index.html"
-                >Home</a
-              >
-              <a
-                class="text-sm font-medium hover:text-primary dark:hover:text-primary"
-                href="./reommendedProduct.html"
-                >Products</a
-              >
             </nav>
           </div>
         </div>
@@ -64,7 +54,8 @@
               Accelerate Material Discovery with AI
             </h1>
             <p class="mt-4 text-lg text-slate-600 dark:text-slate-400">
-              Define your desired properties, and let our AI agent design novel molecules tailored to your needs.
+              Define your desired properties, and let our AI agent design novel
+              molecules tailored to your needs.
             </p>
           </div>
           <div
@@ -165,9 +156,95 @@
                 </div>
               </div>
 
+              <div class="chem-container">
+                <div class="chem-header">
+                  <h1>Hasil Rekomendasi Senyawa</h1>
+                  <span class="badge-status" id="header-status"
+                    >Menunggu Input</span
+                  >
+                </div>
+
+                <div id="results" class="results-wrapper">
+                  <div class="main-info-grid">
+                    <div class="details-col">
+                      <div class="info-group">
+                        <label>Nama Senyawa</label>
+                        <div
+                          id="res-name"
+                          class="value-text"
+                          aria-live="polite"
+                        >
+                          -
+                        </div>
+                      </div>
+
+                      <div class="info-group">
+                        <label>SMILES</label>
+                        <div id="res-smiles" class="value-code">-</div>
+                      </div>
+
+                      <div class="info-group">
+                        <label>Status Prediksi</label>
+                        <div id="res-status" class="value-text">-</div>
+                      </div>
+                    </div>
+
+                    <div class="visual-col">
+                      <div class="mol-box">
+                        <img
+                          id="mol-img"
+                          src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='160'><rect width='100%' height='100%' fill='%23f8fafc'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%2394a3b8' font-family='sans-serif' font-size='14'>Molecule Preview</text></svg>"
+                          alt="Visualisasi Struktur Molekul"
+                        />
+                      </div>
+                      <a
+                        id="download-mol"
+                        href="#"
+                        class="btn-download disabled"
+                        download="recommended_molecule.mol"
+                        aria-label="Unduh File Molekul 3D"
+                      >
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                          <polyline points="7 10 12 15 17 10" />
+                          <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Unduh File .mol
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="divider"></div>
+
+                  <div class="properties-section">
+                    <h4>Properti Prediksi</h4>
+                    <div id="res-props" class="props-grid">
+                      <div class="empty-state">
+                        Properti akan muncul setelah pencarian.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="justification-section">
+                    <h4>Analisis & Justifikasi</h4>
+                    <div id="res-just" class="ai-box">
+                      <p>Hasil justifikasi akan muncul di sini.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div class="pt-4">
                 <button
-                  type="submit"
+                  type="button"
+                  id="submit-btn"
                   class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-bold text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary dark:focus:ring-offset-background-dark transition-colors"
                 >
                   Mulai Pencarian AI
@@ -188,5 +265,6 @@
         </div>
       </footer>
     </div>
+    <script src="../app.js"></script>
   </body>
 </html>
