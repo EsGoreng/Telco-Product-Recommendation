@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const resJustification = document.getElementById("res-just");
   const submitBtn = document.getElementById("submit-btn");
 
-  const API_BASE_URL = "http://localhost:8000";
+  const API_BASE_URL = ""; // This is now handled by relative paths
 
   // Mapping for solubility
   const solubilityMap = {
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      const response = await fetch(`${API_BASE_URL}/discover`, {
+      const response = await fetch(`/api/discover`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -121,14 +121,14 @@ document.addEventListener("DOMContentLoaded", () => {
       resSmiles.textContent = data.recommended_compound.SMILES;
       
       if (data.recommended_compound.Structure_2D_Path) {
-        molImg.src = `${API_BASE_URL}${data.recommended_compound.Structure_2D_Path}`;
+        molImg.src = data.recommended_compound.Structure_2D_Path;
       } else {
         // Fallback image if not provided
         molImg.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='160'><rect width='100%' height='100%' fill='%23f8fafc'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%2394a3b8' font-family='sans-serif' font-size='14'>Preview Not Available</text></svg>";
       }
       
       if (data.recommended_compound.Structure_3D_Path) {
-        downloadMol.href = `${API_BASE_URL}${data.recommended_compound.Structure_3D_Path}`;
+        downloadMol.href = data.recommended_compound.Structure_3D_Path;
         downloadMol.classList.remove("disabled");
       } else {
         downloadMol.href = "#";
